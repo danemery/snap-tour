@@ -1,11 +1,11 @@
 import https from 'https';
 
-export default class TourSchedule {
+export default class Tour {
     constructor() {}
 
-    getTourSchedule(req, res) {
-        https.get('https://rest.bandsintown.com/artists/cultureabuse/events?app_id=snapTour', (tourRes) => {
-            let tourData;
+    getTour(req, res) {
+        https.get('https://rest.bandsintown.com/artists/pup/events?app_id=snapTour', (tourRes) => {
+            let tourData = '';
     
             tourRes.on('data', (data) => {
                 tourData += data;
